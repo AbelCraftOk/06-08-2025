@@ -3,7 +3,7 @@ const usuariosValidos = [
     { nombre: "Pedro Ojeda" },
     { nombre: "Camilo Cabrera" },
     { nombre: "Lucio Serrano" },
-    { nombre: "Dante Fiorabanti" },
+    { nombre: "Dante Fioravanti" },
     { nombre: "Morena Campeone" },
     { nombre: "Amanda Martinez" },
     { nombre: "Benjamin Gay" },
