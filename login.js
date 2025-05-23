@@ -4,7 +4,7 @@ const usuariosValidos = [
     { nombre: "Camilo Cabrera" },
     { nombre: "Lucio Serrano" },
     { nombre: "Dante Fiorabanti" },
-    { nombre: "Morena" },
+    { nombre: "Morena Campeone" },
     { nombre: "Amanda Martinez" },
     { nombre: "Benjamin Gay" },
     { nombre: "Camila Rivas" },
