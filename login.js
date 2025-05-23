@@ -1,25 +1,36 @@
 // Lista de usuarios válidos
 const usuariosValidos = [
-    { nombre: "Pedro Ojeda" },
-    { nombre: "Camilo Cabrera" },
-    { nombre: "Lucio Serrano" },
-    { nombre: "Dante Fioravanti" },
-    { nombre: "Morena Campeone" },
-    { nombre: "Amanda Martinez" },
-    { nombre: "Benjamin Gay" },
-    { nombre: "Camila Rivas" },
-    { nombre: "Lucia Gricia" },
-    { nombre: "Eunice Pantaleon" },
-    { nombre: "Juana Arecha" },
-    { nombre: "Lorenzo Pascuas" },
-    { nombre: "Naomi Pardo" },
-    { nombre: "Rihanna Murillo" },
-    { nombre: "Santino Usquisa" }
+    { nombre: "pedro ojeda" },
+    { nombre: "camilo cabrera" },
+    { nombre: "lucio serrano" },
+    { nombre: "dante fioravanti" },
+    { nombre: "morena campeone" },
+    { nombre: "amanda martinez" },
+    { nombre: "benjamin gay" },
+    { nombre: "camila rivas" },
+    { nombre: "lucia gricia" },
+    { nombre: "eunice pantaleon" },
+    { nombre: "juana arecha" },
+    { nombre: "lorenzo pascuas" },
+    { nombre: "naomi pardo" },
+    { nombre: "rihanna murillo" },
+    { nombre: "santino usquisa" }
 ];
+
+function quitarAcentosYMinusculas(texto) {
+    return texto
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+}
+
 function login() {
-    const nombre = document.getElementById("nombre").value.trim();
+    const nombreInput = document.getElementById("nombre").value.trim();
+    const nombre = quitarAcentosYMinusculas(nombreInput);
     const mensaje = document.getElementById("mensajeLogin");
-    const usuarioEncontrado = usuariosValidos.find(u => u.nombre === nombre);
+    const usuarioEncontrado = usuariosValidos.find(
+        u => quitarAcentosYMinusculas(u.nombre) === nombre
+    );
     if (usuarioEncontrado) {
         mensaje.textContent = "";
         mostrarPestaña("inicio");
