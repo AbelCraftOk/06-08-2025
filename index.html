@@ -181,23 +181,10 @@
             <h3>Fecha:</h3>
             <h3>Ubicación: Calle 166, entre 723 y 725</h3>
             <h3>Localidad: Berisso</h3>
-            <button onclick="mostrarPestaña('acciones')">Informacion para los invitdos</button>
-        </div>
-    </div>
-
-    <div id="acciones" class="pestaña" style="display: none;">
-        <img src="icon1.png" alt="Icono" style="align-items: center; width: 250px; height: 250px; border-radius: 50%; margin-left: 20px;">
-        <h1>Informacion para los invitados</h1>
-        <div class="recuadro">
-            <button onclick="window.open('')">¿Como llegar? - Google Maps</button>
-            <button onclick="abrirrecuadro('que-vamos-a-hacer')">¿Que vamos a hacer?</button>
-        </div>
-        <div id="que-vamos-a-hacer" class="recuadro" style="display: none;">
-            <h2>¿Que vamos a hacer?</h2>
-            <h3>Vamos a:</h3>
-            <p>- Almuerzo y Merienda.</p>
-            <p>- Jugar al Futbol.</p>
-            <button onclick="cerrarrecuadro('que-vamos-a-hacer')">Cerrar</button>
+            <button onclick="window.open('https://maps.app.goo.gl/HdzSnFcuebKUwvgy9')">¿Como llegar? - Google Maps</button>
+            <p>Vamos a almorzar, merendar y Jugar al Futbol.</p>
+            <button onclick="window.open('https://wa.me/542215989210?text=Confirmo%20asistencia...')">Confirmar asistencia</button>
+            <button onclick="window.open('https://wa.me/542215989210?text=Confirmo%20inasistencia...')">Confirmar inasistencia</button>
         </div>
     </div>
 
@@ -238,9 +225,7 @@
                 pestañaSeleccionada.style.display = 'block';
             }
             const encabezadoInferior = document.getElementById("encabezado-inferior");
-            if (id === "inicio") {
-                encabezadoInferior.style.display = 'block';
-            }
+            encabezadoInferior.style.display = 'block';
         }
     </script>
 </body>
